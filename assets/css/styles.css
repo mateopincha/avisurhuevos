@@ -22,9 +22,8 @@ header {
 header h1 {
     font-family: 'BiggerDisplay', sans-serif; /* Aplicando la fuente personalizada */
     margin: 0; /* Sin márgenes */
-    font-size: 8.7em; /* Tamaño de la fuente */
+    font-size: 6em; /* Tamaño de la fuente */
     color: #fff; /* Color del texto */
-    letter-spacing: 0.04em; /* Espaciado entre letras */
 }
 
 nav ul {
@@ -64,62 +63,95 @@ h2 {
     text-align: center; /* Centrar títulos */
 }
 
-.cta-button {
-    display: inline-block; /* Mostrar como bloque en línea */
-    padding: 10px 20px; /* Espaciado interno */
-    background-color: #bc1c24; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    text-decoration: none; /* Sin subrayado */
-    border-radius: 5px; /* Bordes redondeados */
+.categorias-container {
+    display: flex;
+    flex-direction: column; /* Organizar categorías en columna */
+    align-items: flex-start; /* Alinear categorías al inicio */
 }
 
-.cta-button:hover {
-    background-color: #bc1c24; /* Color de fondo al pasar el ratón */
+.categoria {
+    margin-bottom: 30px; /* Espaciado inferior para cada categoría */
 }
 
-.productos-container {
-    display: flex; /* Usar flexbox para disposición en fila */
-    flex-wrap: wrap; /* Permitir que los elementos se ajusten a múltiples líneas */
-    justify-content: center; /* Centrar productos en la sección */
-    margin: 20px 0; /* Margen superior e inferior */
+.categoria h3 {
+    color: #bc1c24; /* Color de los encabezados de categoría */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.productos-lista {
+    display: flex; /* Usar flexbox para alinear productos en fila */
+    flex-wrap: wrap; /* Permitir que los productos se ajusten a múltiples líneas */
+    padding: 0; /* Sin relleno */
+    margin: 0; /* Sin márgenes */
+    list-style: none; /* Sin viñetas */
 }
 
 .producto {
-    width: calc(20% - 20px); /* Ancho de cada producto */
     margin: 10px; /* Margen entre productos */
-    text-align: center; /* Centrar texto en productos */
     border: 1px solid #ccc; /* Borde gris claro */
     border-radius: 10px; /* Bordes redondeados */
     overflow: hidden; /* Para evitar que el contenido se desborde */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
     transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
+    width: 150px; /* Ancho fijo para los productos */
 }
 
 .producto:hover {
     transform: translateY(-5px); /* Elevar el producto al pasar el ratón */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el ratón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el ratón */
 }
 
 .producto img {
-    max-width: 100%; /* Ajustar el tamaño de la imagen */
+    max-width: 100%; /* Ajustar el tamaño de la imagen dentro del producto */
     height: auto; /* Mantener la proporción */
     border-bottom: 1px solid #ccc; /* Línea divisoria entre la imagen y el texto */
 }
 
-.producto h3 {
+.producto h4 {
     margin: 10px 0; /* Margen superior e inferior */
-    font-size: 1.5em; /* Tamaño de fuente del título del producto */
+    font-size: 1.2em; /* Tamaño de fuente del título del producto */
     color: #bc1c24; /* Color del título */
 }
 
 .producto p {
     font-size: 1em; /* Tamaño de fuente de la descripción */
-    color: #666; /* Color gris para la descripción */
+    color: #333; /* Color del texto de la descripción (cambiado a un gris oscuro) */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad para destacar */
+    padding: 5px; /* Espaciado interno para el fondo */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.cta-button {
+    display: inline-block; /* Mostrar como bloque en línea */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #a9a9a9; /* Color de fondo del botón (gris más claro) */
+    color: #fff; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave al cambiar el color */
+}
+
+.cta-button:hover {
+    background-color: #888; /* Color de fondo al pasar el ratón (gris más oscuro) */
 }
 
 footer {
     text-align: center; /* Centrar texto en el pie de página */
     padding: 10px; /* Espaciado interno */
     background-color: #333; /* Color de fondo del pie de página */
-    color: #fff; /* Color del texto en el pie de página */
+    color: #fff; /* Color del texto */
+}
+
+.whatsapp-button {
+    position: fixed; /* Fijo en la esquina inferior derecha */
+    bottom: 20px; /* 20px desde el fondo */
+    right: 20px; /* 20px desde la derecha */
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    border-radius: 50%; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.whatsapp-button img {
+    width: 50px; /* Ancho de la imagen del botón */
+    height: auto; /* Mantener proporción de la imagen */
 }
